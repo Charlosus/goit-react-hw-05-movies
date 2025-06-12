@@ -1,7 +1,7 @@
 {
-  "name": "basic-setup",
+  "name": "goit-react-hw-05-movies",
   "private": true,
-  "homepage": "https://Charlosus.github.io/basic-setup",
+  "homepage": "https://Charlosus.github.io/goit-react-hw-05-movies",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "router": "^2.2.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.27.1",
