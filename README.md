@@ -1,32 +1,42 @@
-React Movies App 🎬
-This is a React application for browsing and searching movies using the TMDB API.
-Users can view trending movies, search by title, and see detailed information about selected films, including cast and reviews.
+# React Movie Search App
 
-Features
-🔍 Search movies by title
+This is a React application for searching movies using The Movie Database (TMDb) API.  
+It features:
 
-📈 View trending movies on homepage
+- Trending movies on the homepage
+- Search functionality with query parameters
+- Movie details page with nested routes for cast and reviews
+- Lazy loading for better performance
+- React Router v6 for navigation
 
-🎭 View movie details with genres, score, overview
+## Getting Started
 
-👥 View cast and read reviews
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   Start the development server:
+   ```
 
-🔙 Navigate easily with back links preserving previous location
+```bash
 
-Tech Stack
-React + React Router
+npm start
+```
 
-Fetch API
+Technologies
+React
 
-React Spinners for loading indicators
+React Router v6
 
-Deployed with Vite
+React Suspense and Lazy
 
-Setup
-Clone the repo
+TMDb API
 
-Run npm install
+CSS modules (optional)
 
-Add your TMDB API key in tmdbApi.js
+Notes
+Remember to add your TMDb API key in the tmdbApi.js service file.
 
-Run npm run dev to start the app
+This project is a practice exercise for React routing, data fetching, and component lazy loading.
+
+Feel free to contribute or open issues!
