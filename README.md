@@ -13,30 +13,32 @@ It features:
 
 1. Clone the repository
 2. Install dependencies:
+
    ```bash
    npm install
-   Start the development server:
    ```
 
-```bash
+   Start the development server:
 
-npm start
-```
+   ```bash
 
-Technologies
-React
+   npm start
+   ```
 
-React Router v6
+   Technologies
+   React
 
-React Suspense and Lazy
+   React Router v6
 
-TMDb API
+   React Suspense and Lazy
 
-CSS modules (optional)
+   TMDb API
 
-Notes
-Remember to add your TMDb API key in the tmdbApi.js service file.
+   CSS modules (optional)
 
-This project is a practice exercise for React routing, data fetching, and component lazy loading.
+   Notes
+   Remember to add your TMDb API key in the tmdbApi.js service file.
 
-Feel free to contribute or open issues!
+   This project is a practice exercise for React routing, data fetching, and component lazy loading.
+
+   Feel free to contribute or open issues!
