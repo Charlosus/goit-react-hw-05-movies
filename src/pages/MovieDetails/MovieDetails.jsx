@@ -4,7 +4,7 @@ import { fetchMovieById } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
 import { Link } from 'react-router-dom';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +14,7 @@ export const MovieDetails = () => {
       setIsLoading(true);
       try {
         const data = await fetchMovieById(movieId);
-        setMovie(data), console.log(data);
+        setMovie(data);
       } catch (error) {
         console.error('Error has ocure while requesting data: ', error);
       } finally {
@@ -69,3 +69,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

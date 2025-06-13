@@ -3,7 +3,7 @@ import { fetchTrandingMovie } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
 import { Link } from 'react-router-dom';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -43,3 +43,5 @@ export const Home = () => {
     </main>
   );
 };
+
+export default Home

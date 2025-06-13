@@ -4,7 +4,7 @@ import { SearchBox } from './Searchbox';
 import { useEffect, useState } from 'react';
 import { searchMovies } from '../../services/tmdbApi';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('name') ?? '';
@@ -53,3 +53,5 @@ export const Movies = () => {
     </main>
   );
 };
+
+export default Movies;
