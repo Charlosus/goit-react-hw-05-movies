@@ -37,7 +37,8 @@ It features:
 
 5. CSS modules (optional)
 
-Notes
+## Notes
+
 Remember to add your TMDb API key in the tmdbApi.js service file.
 
 This project is a practice exercise for React routing, data fetching, and component lazy loading.
