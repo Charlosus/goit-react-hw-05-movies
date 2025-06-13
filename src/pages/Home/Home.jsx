@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { fetchTrandingMovie } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     async function getMovies() {
@@ -36,7 +37,9 @@ const Home = () => {
         {movies.map((movie) => (
           <li key={movie.id}>
             {' '}
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+              {movie.title}
+            </Link>
           </li>
         ))}
       </ul>
@@ -44,4 +47,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;

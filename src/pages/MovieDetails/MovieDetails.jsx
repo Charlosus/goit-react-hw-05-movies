@@ -66,7 +66,13 @@ const MovieDetails = () => {
       </div>
 
       <nav>
-        <Link to="cast" state={{ from: backLink.current }}>Cast</Link> | <Link to="reviews" state={{ from: backLink.current }}>Reviews</Link>
+        <Link to="cast" state={{ from: backLink.current }}>
+          Cast
+        </Link>{' '}
+        |{' '}
+        <Link to="reviews" state={{ from: backLink.current }}>
+          Reviews
+        </Link>
       </nav>
 
       <Outlet />

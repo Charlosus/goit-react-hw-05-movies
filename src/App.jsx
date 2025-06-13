@@ -8,7 +8,7 @@ import './App.css';
 const Home = lazy(() => import('./pages/Home/Home'));
 const Movies = lazy(() => import('./pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('./pages/MovieDetails/MovieDetails'));
-const NotFoundPage = lazy(() => import('./components/NotFoundPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
   return (
