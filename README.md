@@ -1,50 +1,32 @@
-# Basic React Setup with Vite and ESLint
+React Movies App 🎬
+This is a React application for browsing and searching movies using the TMDB API.
+Users can view trending movies, search by title, and see detailed information about selected films, including cast and reviews.
 
-This is a starter React project using Vite as the build tool and ESLint for code linting.
+Features
+🔍 Search movies by title
 
-## Included Packages
+📈 View trending movies on homepage
 
-- **react** and **react-dom** — React library and DOM renderer
-- **vite** — Fast build tool and dev server
-- **eslint** — Code linter to keep code clean and consistent
-- **@babel/eslint-parser** — ESLint parser to support modern JS and JSX syntax
-- **eslint-plugin-react** — React specific linting rules
-- **eslint-plugin-react-hooks** — Linting for React Hooks rules
-- **eslint-plugin-react-refresh** — Support for React Fast Refresh in ESLint
-- **@vitejs/plugin-react** — Vite plugin for React support
-- **prettier** — Code formatter (optional)
+🎭 View movie details with genres, score, overview
 
-## Getting Started
+👥 View cast and read reviews
 
-1. Clone the repo:
-<pre> 
-git clone https://github.com/Charlosus/basic-setup.git   
-cd basic-setup
-</pre>
-Install dependencies:
+🔙 Navigate easily with back links preserving previous location
 
-<pre> npm install  </pre>
+Tech Stack
+React + React Router
 
-Start the development server:
+Fetch API
 
-<pre> npm run dev  </pre>
+React Spinners for loading indicators
 
-Run ESLint to check for code issues:
+Deployed with Vite
 
-<pre> npm run lint  </pre>
+Setup
+Clone the repo
 
-Build the project for production:
+Run npm install
 
-<pre> npm run build  </pre>
+Add your TMDB API key in tmdbApi.js
 
-Preview the production build:
-
-<pre> npm run preview  </pre>
-
-Notes
-ESLint config is in eslint.config.js using the flat config system.
-
-React Fast Refresh is enabled via ESLint plugin.
-
-Adjust .eslintrc or eslint.config.js if you want to customize linting rules.
-
+Run npm run dev to start the app
