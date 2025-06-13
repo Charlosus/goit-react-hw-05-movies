@@ -1,0 +1,1 @@
+import{j as e,L as o}from"./index-2pSYVfJK.js";const t=()=>e.jsxs("div",{style:{padding:"2rem",textAlign:"center"},children:[e.jsx("h1",{children:"404 - Page Not Found"}),e.jsx("p",{children:"These are not movies you looking for..."}),e.jsx(o,{to:"/",children:"Come Back "})]});export{t as default};
