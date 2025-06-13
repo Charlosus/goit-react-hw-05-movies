@@ -25,20 +25,21 @@ It features:
    npm start
    ```
 
-   Technologies
-   React
+## Technologies
 
-   React Router v6
+1. React
 
-   React Suspense and Lazy
+2. React Router v6
 
-   TMDb API
+3. React Suspense and Lazy
 
-   CSS modules (optional)
+4. TMDb API
 
-   Notes
-   Remember to add your TMDb API key in the tmdbApi.js service file.
+5. CSS modules (optional)
 
-   This project is a practice exercise for React routing, data fetching, and component lazy loading.
+Notes
+Remember to add your TMDb API key in the tmdbApi.js service file.
 
-   Feel free to contribute or open issues!
+This project is a practice exercise for React routing, data fetching, and component lazy loading.
+
+Feel free to contribute or open issues!
