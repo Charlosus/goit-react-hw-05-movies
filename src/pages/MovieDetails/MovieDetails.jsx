@@ -2,11 +2,14 @@ import { Outlet, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovieById } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useRef } from 'react';
 
 const MovieDetails = () => {
+  const location = useLocation();
+  const backLink = useRef(location.state?.from ?? '/');
   const { movieId } = useParams();
-  const [movie, setMovie] = useState('');
+  const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -38,6 +41,7 @@ const MovieDetails = () => {
 
   return (
     <div>
+      <Link to={backLink.current}>← Back</Link>
       <div>
         <h1>{movie.title}</h1>
         <div>
@@ -62,7 +66,7 @@ const MovieDetails = () => {
       </div>
 
       <nav>
-        <Link to="cast">Cast</Link> | <Link to="reviews">Reviews</Link>
+        <Link to="cast" state={{ from: backLink.current }}>Cast</Link> | <Link to="reviews" state={{ from: backLink.current }}>Reviews</Link>
       </nav>
 
       <Outlet />
