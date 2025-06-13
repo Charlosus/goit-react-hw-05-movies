@@ -4,7 +4,6 @@ import { fetchMovieById } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
 import { Link } from 'react-router-dom';
 
-
 export const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState('');
@@ -15,7 +14,7 @@ export const MovieDetails = () => {
       setIsLoading(true);
       try {
         const data = await fetchMovieById(movieId);
-        setMovie(data);
+        setMovie(data), console.log(data);
       } catch (error) {
         console.error('Error has ocure while requesting data: ', error);
       } finally {
@@ -39,7 +38,29 @@ export const MovieDetails = () => {
 
   return (
     <div>
-      <h1>{movie.title}</h1>
+      <div>
+        <h1>{movie.title}</h1>
+        <div>
+          {' '}
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            alt="movie poster"
+          />
+        </div>
+        <div>
+          <h3>
+            User Score: <span>{Math.floor(movie.vote_average * 10)}%</span>
+          </h3>
+          <h3>Overview</h3>
+          <p>{movie.overview}</p>
+          <h3>Genres</h3>
+
+          {movie.genres.map(({ id, name }) => (
+            <p key={id}>{name}</p>
+          ))}
+        </div>
+      </div>
+
       <nav>
         <Link to="cast">Cast</Link> | <Link to="reviews">Reviews</Link>
       </nav>
