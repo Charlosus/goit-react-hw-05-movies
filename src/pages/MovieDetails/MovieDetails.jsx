@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovieById } from '../../services/tmdbApi';
 import { ClipLoader } from 'react-spinners';
+import { Link } from 'react-router-dom';
+
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -23,16 +25,26 @@ export const MovieDetails = () => {
     getMovie();
   }, [movieId]);
 
+  if (isLoading) {
+    return (
+      <div
+        style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}
+      >
+        <ClipLoader color="#ff6b08" size={40} />
+      </div>
+    );
+  }
+
+  if (!movie) return <p>No movie data</p>;
+
   return (
     <div>
-      {isLoading && (
-        <div
-          style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}
-        >
-          <ClipLoader color="#ff6b08" size={40} />
-        </div>
-      )}
-      {movie && <h1>{movie.title}</h1>}
+      <h1>{movie.title}</h1>
+      <nav>
+        <Link to="cast">Cast</Link> | <Link to="reviews">Reviews</Link>
+      </nav>
+
+      <Outlet />
     </div>
   );
 };

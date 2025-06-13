@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY = 'f42a8fcfb8ef8d22075cdcd2c215b4a3';
 
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -11,7 +11,7 @@ const instance = axios.create({
 
 export const fetchTrandingMovie = async () => {
   const response = await instance.get('/trending/movie/day');
-  return response.data.result;
+  return response.data.results;
 };
 
 export const fetchMovieById = async (movieId) => {
@@ -19,4 +19,14 @@ export const fetchMovieById = async (movieId) => {
   return response.data;
 };
 
-console.log('API_KEY: ', API_KEY);
+export const fetchMovieCast = async (movieId) => {
+  const response = await instance.get(`/movie/${movieId}/credits`);
+  return response.data.cast;
+};
+
+export const fetchMovieReviews = async (movieId) => {
+  const response = await instance.get(`/movie/${movieId}/reviews`);
+  return response.data.results;
+};
+
+
